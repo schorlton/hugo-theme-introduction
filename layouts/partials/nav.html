@@ -12,8 +12,8 @@
             <!-- look for custom menu and include it -->
             {{ if .Site.Menus.main }}
             {{ range .Site.Menus.main }}
-            {{ if .HasChildren }}
-            <a class="navbar-item"  href="{{ .URL }}">
+	    {{ if eq .Name "Github" }}
+	    <a class="navbar-item"  href="{{ .URL }}" target="_blank">
                 {{ .Pre }}
                 {{ .Name }}
                 {{ .Post }}
